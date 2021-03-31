@@ -1,0 +1,149 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		link(rel="stylesheet" href="../static/css/style.css")
+		link(rel="stylesheet" href="../static/css/responsive.css")
+		title NSS UIET
+	body
+		nav.navbar.footer.h-nav-resp
+			ul.nav-list.v-class-resp
+				.logo
+					img(src="../static/img/1.png" alt="logo")
+				li
+					a(href="#") Home
+				li
+					a(href="#events") Events
+				li
+					a(href="#team") Team
+				li
+					a(href="#about") About
+				li
+					a(href="#contact") Contact Us
+			.burger
+				.line
+				.line
+				.line
+		section.background.firstSection
+			.box-main
+				.firstHalf
+					p.text-big NOT ME, BUT YOU
+					p.text-small
+						| The programme aims to inculcate social welfare in students, and to provide service
+						| to society without bias.
+				.secondHalf
+					img(src="../static/img/img.png" alt="NSS")
+		#events
+			.eventnssheading1
+				h1  Activities/Events
+				hr
+			section.section
+				.paras
+					p.sectionTag.text-big Plantation Drive
+					p.sectionSubTag.text-small
+						| Text related to plantation activity done by us like this we can all
+						| aur
+						| activities, competions
+						| ,events and all that stuff here
+				.thumbnail
+					img.imgFluid(src="../static/img/plantation.jpg" alt="event")
+			section.section
+				.paras
+					p.sectionTag.text-big Plantation Drive
+					p.sectionSubTag.text-small
+						| Text related to plantation activity done by us like this we can all
+						| aur
+						| activities, competions
+						| ,events and all that stuff here
+				.thumbnail
+					img.imgFluid(src="../static/img/plantation.jpg" alt="event")
+			section.section
+				.paras
+					p.sectionTag.text-big Plantation Drive
+					p.sectionSubTag.text-small
+						| Text related to plantation activity done by us like this we can all
+						| aur
+						| activities, competions
+						| ,events and all that stuff here
+				.thumbnail
+					img.imgFluid(src="../static/img/plantation.jpg" alt="event")
+		#team
+			.teamnssh1
+				h1 Our Team
+				hr
+			section.section.section-left
+				.paras
+					p.sectionTag.text-big Prof. Gagandeep
+					p.sectionSubTag.text-small
+						b Faculty Coordinator
+						br
+						|                     some lines from and for nitish some lines from and for nitish
+						|                     some lines from and for nitish some lines from and for nitish
+				.thumbnail-team
+					img.imgFluid(src="https://source.unsplash.com/900x900/?teacher" alt="laptop image")
+			hr
+			section.section.section-left
+				.paras
+					p.sectionTag.text-big Nitish Gupta
+					p.sectionSubTag.text-small
+						| some lines from and for nitish some lines from and for nitish
+						| some lines from and for nitish some lines from and for nitish
+				.thumbnail-team
+					img.imgFluid(src="https://source.unsplash.com/900x900/?boy" alt="laptop image")
+			hr
+			section.section.section-left
+				.paras
+					p.sectionTag.text-big Shristy
+					p.sectionSubTag.text-small
+						| some lines from and for nitish some lines from and for nitish
+						| some lines from and for nitish some lines from and for nitish
+				.thumbnail-team
+					img.imgFluid(src="https://source.unsplash.com/900x900/?girl" alt="laptop image")
+			hr
+			section.section.section-left
+				.paras
+					p.sectionTag.text-big Shubu
+					p.sectionSubTag.text-small
+						| some lines from and for nitish some lines from and for nitish
+						| some lines from and for nitish some lines from and for nitish
+				.thumbnail-team
+					img.imgFluid(src="https://source.unsplash.com/900x900/?men" alt="laptop image")
+			hr
+			section.section.section-left
+				.paras
+					p.sectionTag.text-big yajur
+					p.sectionSubTag.text-small
+						| some lines from and for nitish some lines from and for nitish
+						| some lines from and for nitish some lines from and for nitish
+				.thumbnail-team
+					img.imgFluid(src="https://source.unsplash.com/900x900/?nature" alt="laptop image")
+		#about
+			.aboutnssh1
+				h1  ABOUT US
+				hr
+			section.section
+				.paras
+					p.sectionTag.text-big Lets Grow Together
+					p.sectionSubTag.text-small
+						| The National Service Scheme (NSS) is an Indian government-sponsored
+						| flagship for public service program conducted by the Ministry of Youth Affairs and Sports of the Government of India.
+						| Popularly known as NSS, the scheme was launched in Gandhiji's Centenary year in 1969. Aimed at developing student's personality
+						| through community service, NSS is a voluntary association of young people in Colleges,
+						| Universities and at +2 level working for a campus-community (esp. Villages) linkage.
+					p.sectionSubTag.text-small
+						| Matteo Ricci (left) and Xu Guangqi (right) in the Chinese edition of Euclid's Elements published in
+						| 1607
+						| Plato founded the Academy in Athens, the first institution of higher learning in Europe.
+				.thumbnail
+					img.imgFluid(src="https://source.unsplash.com/900x900/?infra" alt="laptop image")
+		div
+			section#contact.contact
+				h1.text-center Contact Us
+				form(action= "/contact", method= "post", class= "form")
+					input#name.form-input(type="text" name="name" placeholder="Enter Your name")
+					input#phone.form-input(type="text" name="phone" placeholder="Enter Your Phone")
+					input#email.form-input(type="email" name="email" placeholder="Enter Your email")
+					textarea#text.form-input(name="concern" cols="30" rows="10" placeholder="Ellaborate your concern" style="height: 77px;resize: none;")
+					button.btn.btn-sm.btn-dark Submit
+
