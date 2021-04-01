@@ -5,7 +5,6 @@ require('./db/conn');
 const Nsscontact = require('./models/contactmodel');
 const path = require("path");
 
-
 const port = process.env.PORT || 3000;
 
 // EXPRESS SPECIFIC STUFF
