@@ -4,7 +4,8 @@ const contactSchema = new mongoose.Schema({
     name: String,
     phone: String,
     email: String,
-    concern: String
+    concern: String,
+    status: String
   });
 
 const Nsscontact = new mongoose.model('nsscontact', contactSchema);
