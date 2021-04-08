@@ -1,0 +1,64 @@
+doctype html
+html
+  head
+    title Admin Zone
+    //- link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous")
+    link(rel='stylesheet', href='/static/styleadmin1.css', type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Baloo+Bhai|Candal|Chewy&display=swap', rel='stylesheet')
+    link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.8.2/css/all.css', integrity='sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay', crossorigin='anonymous')
+    link(rel="stylesheet" href="./static/tablestyle.css")
+    link(rel="stylesheet" href="./static/css/style.css")
+    link(rel="stylesheet" href="./static/css/responsive.css")
+    
+    
+  body
+    nav.navbar.footer.h-nav-resp
+      ul.nav-list.v-class-resp
+        .logo
+          img(src="../static/img/1.png" alt="logo")
+        li
+          a(href="#") Home
+        
+        li
+          a(href="/#team") Team
+        li
+          a(href="/#about") About
+        li
+          a(href="") Add_Admin
+       
+      .burger
+        .line
+        .line
+        .line
+    .container
+      h2
+        | Contact Queries 
+        small NSS UIET
+      ul.responsive-table
+        li.table-header
+          .col.col-1 Name
+          .col.col-2 Email
+          .col.col-3 Phone
+          .col.col-4 Concern
+          .col.col-5 Status
+          .col.col-6 Change status
+        each collection in data
+          li.table-row
+            .col.col-1(data-label="Name")=collection.name
+            .col.col-2(data-label="Email")=collection.email
+            .col.col-3(data-label="Phone")=collection.phone
+            .col.col-4(data-label="Concern")=collection.concern
+            .col.col-5(data-label="Status")=collection.status
+            .col.col-6(data-label="Change Status")
+              form(action='/save/'+collection._id+'/pending', method="post")
+                input.pendingbutton(type="submit" value="Pending")
+              form(action='/save/'+collection._id+'/resolved', method="post")
+                input.resolvedbutton(type="submit" value="Resolved")
+            
+    
+    footer.footer.f
+      p.text-footer
+        | Copyright © - NSS UIET - All rights reserved
+        br
+        | Created by - Nitish Gupta
+    script(src="../static/js/resp.js")

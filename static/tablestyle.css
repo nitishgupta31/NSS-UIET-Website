@@ -1,0 +1,125 @@
+body {
+    font-family: 'lato', sans-serif;
+}
+.container {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+h2 {
+    font-size: 26px;
+    margin: 20px 0;
+    text-align: center;
+}
+h2 small {
+    font-size: 0.5em;
+}
+.responsive-table{
+    text-align: center;
+}
+.responsive-table li {
+    border-radius: 3px;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: center;
+}
+.responsive-table .table-header {
+    background-color: #000000ab;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: rgb(255, 255, 255);
+    /* text-align: center; */
+}
+.responsive-table .table-row {
+    background-color: #fff;
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+}
+.responsive-table .col-1 {
+    flex-basis: 100%;
+    width: 0;
+}
+.responsive-table .col-2 {
+    flex-basis: 100%;
+    width: 0;
+}
+.responsive-table .col-3 {
+    flex-basis: 100%;
+    width: 0;
+}
+.responsive-table .col-4 {
+    flex-basis: 100%;
+    width: 0;
+}
+.responsive-table .col-5 {
+    flex-basis: 100%;
+    width: 0;
+  }
+.responsive-table .col-6 {
+    flex-basis: 100%;
+    width: 0;
+}
+input.pendingbutton{
+    display:inline-block;
+    padding:0.3em 1.2em;
+    margin:0 0.3em 0.3em 0;
+    border-radius:2em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#FFFFFF;
+    background-color:#d72f2f;;
+    text-align:center;
+    transition: all 0.2s;
+    width: 90px;
+    }
+    input.resolvedbutton{
+        display:inline-block;
+        padding:0.3em 1.2em;
+        margin:0 0.3em 0.3em 0;
+        border-radius:2em;
+        box-sizing: border-box;
+        text-decoration:none;
+        font-family:'Roboto',sans-serif;
+        font-weight:300;
+        color:#FFFFFF;
+        background-color:#1c9534ba;
+        text-align:center;
+        transition: all 0.2s;
+        width: 90px;
+        }
+input.pendingbutton:hover{
+    color: black;
+    cursor: pointer;
+}
+input.resolvedbutton:hover{
+    color: black;
+    cursor: pointer;
+}
+@media all and (max-width: 767px) {
+    .responsive-table .table-header {
+        display: none;
+    }
+    .responsive-table li {
+        display: block;
+    }
+    .responsive-table .col {
+        flex-basis: 100%;
+    }
+    .responsive-table .col {
+        display: flex;
+        padding: 10px 0;
+    }
+    .responsive-table .col:before {
+        color: #6c7a89;
+        padding-right: 10px;
+        content: attr(data-label);
+        flex-basis: 50%;
+        text-align: right;
+    }
+}

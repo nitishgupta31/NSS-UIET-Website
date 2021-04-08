@@ -2,13 +2,9 @@ require("dotenv").config();
 const express = require('express');
 const app = express();
 require('./db/conn');
-const Register = require('./models/models');
 const Nsscontact = require('./models/contactmodel');
 const path = require("path");
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
 const cookieParser = require('cookie-parser');
-const auth = require("../middleware/auth")
 const port = process.env.PORT || 3000;
 
 // EXPRESS SPECIFIC STUFF
@@ -37,6 +33,28 @@ app.post('/contact', (req, res) => {
   }).catch(err => {
     res.status(400).send("unable to save your response try again later");
   });
+})
+
+const showDocument = async () => {
+  try {
+    const collections = await Nsscontact.find({})  //returning BSON 
+    object = { "c": collections }
+    if (collections[0] == undefined) {
+      object = { "data": collections, "message": "Nothing to show!" }
+
+    }
+    else {
+      object = { "data": collections, "message": "Contact Queries" }
+    }
+  } catch (error) {
+    console.log(error)
+  }
+
+}
+
+app.get('/admin1', async (req, res) => {
+  await showDocument();
+  res.status(200).render('admin1.pug', object);
 })
 
 app.listen(port, () => {
