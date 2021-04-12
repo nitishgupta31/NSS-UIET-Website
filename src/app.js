@@ -2,8 +2,11 @@ require("dotenv").config();
 const express = require('express');
 const app = express();
 require('./db/conn');
+const Register = require('./models/models');
 const Nsscontact = require('./models/contactmodel');
 const path = require("path");
+// const bcrypt = require('bcryptjs');
+// const jwt = require('jsonwebtoken');
 const cookieParser = require('cookie-parser');
 const port = process.env.PORT || 3000;
 
@@ -52,10 +55,45 @@ const showDocument = async () => {
 
 }
 
-app.get('/admin1', async (req, res) => {
+app.post("/save/:id/pending", (req, res) => {
+  console.log(req.body);
+  console.log(res)
+  const id = req.params.id;
+  Nsscontact.findByIdAndUpdate(id, {
+    status: "Pending"
+  }, err => {
+    if (err) return res.send(500, err);
+    res.redirect("/admin1");
+  });
+});
+app.post("/save/:id/resolved", (req, res) => {
+  console.log(req.body);
+  console.log(res)
+  const id = req.params.id;
+  Nsscontact.findByIdAndUpdate(id, {
+    status: "Resolved"
+  }, err => {
+    if (err) return res.send(500, err);
+    res.redirect("/admin1");
+  });
+});
+app.get('/admin1' , async (req, res) => {
   await showDocument();
   res.status(200).render('admin1.pug', object);
 })
+app.get("/login", (req, res) => {
+  res.render("login.pug")
+});
+
+app.post("/login", async (req, res) => {
+  try {
+    const email = req.body.email;
+    const password = req.body.password;
+
+    const useremail = await Register.findOne({ email: email })
+   
+});
+
 
 app.listen(port, () => {
   console.log(`server is running at port ${port}`);
