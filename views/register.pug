@@ -1,0 +1,84 @@
+doctype html
+head
+  title Admin Registration
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  link(rel='icon' type='image/png' href='../static/images/icons/favicon.ico')
+  link(rel='stylesheet' type='text/css' href='../static/main.css')
+  link(rel="stylesheet" href="../static/css/style.css") 
+  link(rel="stylesheet" href="../static/css/responsive.css")
+  script(src='https://kit.fontawesome.com/a076d05399.js')
+body
+  nav.navbar.footer.h-nav-resp
+        ul.nav-list.v-class-resp
+          .logo
+            img(src="../static/img/1.png" alt="logo")
+          li
+            a(href="/admin1") Home
+          li
+            a(href="/#team") Team
+          li
+            a(href="/#about") About
+          li
+            a(href="/register") Add Admin
+        .burger
+          .line
+          .line
+          .line
+  .limiter
+    .container-login100
+      .wrap-login100
+        .login100-pic.js-tilt(data-tilt='')
+          img(src='../static/images/img-01.png' alt='IMG')
+        form(action= "/register", method= "post", class= "login100-form validate-form")
+          span.login100-form-title
+            | Add New Admin
+
+          .wrap-input100.validate-input(data-validate='Valid email is required: ex@abc.xyz')
+            <input type="text" class="myInput input100" name="name" placeholder="Enter your name..">
+            span.symbol-input100
+                i.fa.fa-user-alt(aria-hidden='true')
+          
+          .wrap-input100.validate-input(data-validate='Valid email is required: ex@abc.xyz')
+            <input type="phone" class="myInput input100" name="phone" placeholder="phone..">
+              span.symbol-input100
+                i.fa.fa-phone-alt(aria-hidden='true')
+
+
+          .wrap-input100.validate-input(data-validate='Valid email is required: ex@abc.xyz')
+            <input type="email" class="myInput input100" name="email" placeholder="Enter your email..">
+            span.symbol-input100
+              i.fa.fa-envelope(aria-hidden='true')
+          
+          .wrap-input100.validate-input(data-validate='Valid email is required: ex@abc.xyz')
+            <input type="password" class="myInput input100" name="password" placeholder="Password..">
+            span.symbol-input100
+              i.fa.fa-lock(aria-hidden='true')
+          
+          .wrap-input100.validate-input(data-validate='Valid email is required: ex@abc.xyz')
+            <input type="password" class="myInput input100" name="confirmPassword" placeholder="Confirm Password..">
+            span.symbol-input100
+              i.fa.fa-lock(aria-hidden='true')
+            
+          .container-login100-form-btn
+            button.login100-form-btn
+              | ADD
+            
+              
+  footer.footer
+    p.text-footer
+      | Copyright © - NSS UIET - All rights reserved
+      br
+      | Created by - Nitish Gupta
+  script(src="../static/js/resp.js")
+  script.
+    $('.js-tilt').tilt({
+    scale: 1.1
+    })
+  script(async='' src='https://www.googletagmanager.com/gtag/js?id=UA-23581568-13')
+  script.
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-23581568-13');
+  script(src='js/main.js')

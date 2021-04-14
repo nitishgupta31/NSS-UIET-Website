@@ -85,14 +85,10 @@ app.get("/login", (req, res) => {
   res.render("login.pug")
 });
 
-app.post("/login", async (req, res) => {
-  try {
-    const email = req.body.email;
-    const password = req.body.password;
-
-    const useremail = await Register.findOne({ email: email })
-   
+app.get("/register",auth, (req, res) => {
+  res.render("register.pug")
 });
+
 
 
 app.listen(port, () => {
