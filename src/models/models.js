@@ -32,6 +32,30 @@ const registerSchema = new mongoose.Schema({
     }]
 });
 
+registerSchema.methods.generateAuthToken = async function () {
+    try {
+        const token = jwt.sign({ _id: this.id.toString() }, process.env.SECRET)
+        this.tokens = this.tokens.concat({ token: token })
+        await this.save()
+        return token
+
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+registerSchema.pre("save", async function (next) {
+    if (this.isModified('password')) {
+        try {
+            this.password = await bcrypt.hash(this.password, 10);
+            this.confirmPassword = await bcrypt.hash(this.password, 10);
+        }
+        catch (error) {
+            console.log(error)
+        }
+    }
+    next();
+})
 
 const Register = new mongoose.model('Register', registerSchema);
 module.exports = Register;

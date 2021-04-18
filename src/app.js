@@ -5,9 +5,10 @@ require('./db/conn');
 const Register = require('./models/models');
 const Nsscontact = require('./models/contactmodel');
 const path = require("path");
-// const bcrypt = require('bcryptjs');
-// const jwt = require('jsonwebtoken');
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 const cookieParser = require('cookie-parser');
+const auth = require("../middleware/auth")
 const port = process.env.PORT || 3000;
 
 // EXPRESS SPECIFIC STUFF
@@ -77,7 +78,7 @@ app.post("/save/:id/resolved", (req, res) => {
     res.redirect("/admin1");
   });
 });
-app.get('/admin1' , async (req, res) => {
+app.get('/admin1', async (req, res) => {
   await showDocument();
   res.status(200).render('admin1.pug', object);
 })
@@ -85,11 +86,62 @@ app.get("/login", (req, res) => {
   res.render("login.pug")
 });
 
-app.get("/register",auth, (req, res) => {
+app.post("/login", async (req, res) => {
+  try {
+    const email = req.body.email;
+    const password = req.body.password;
+
+    const useremail = await Register.findOne({ email: email })
+    const isMatch = await bcrypt.compare(password, useremail.password)
+
+    const token = await useremail.generateAuthToken();
+
+    res.cookie("jwt", token, {
+      expires: new Date(Date.now() + 30000000),
+      httpOnly: true,
+      //secure: true
+    })
+
+    if (isMatch) {
+      res.status(201).redirect("/admin1")
+    }
+    else {
+      res.status(400).send("invalid credentials")
+
+    }
+  } catch (error) {
+    res.status(400).send("invalid credentials")
+  }
+});
+
+app.get("/register", (req, res) => {
   res.render("register.pug")
 });
 
+app.post('/register', async (req, res) => {
+  try {
+    if (req.body.password === req.body.confirmPassword) {
+      var myData = new Register(req.body);
 
+      console.log(myData)
+
+      const token = await myData.generateAuthToken();
+
+      res.cookie("jwt", token, {
+        expires: new Date(Date.now() + 30000),
+        httpOnly: true
+      })
+
+      await myData.save()
+      res.status(201).redirect("/admin1");
+    }
+    else {
+      res.send("Passwords Donot Match");
+    }
+  } catch (error) {
+    res.status(400).send("unable to save to database");
+  }
+})
 
 app.listen(port, () => {
   console.log(`server is running at port ${port}`);
