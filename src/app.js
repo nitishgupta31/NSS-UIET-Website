@@ -78,7 +78,7 @@ app.post("/save/:id/resolved", (req, res) => {
     res.redirect("/admin1");
   });
 });
-app.get('/admin1', async (req, res) => {
+app.get('/admin1', auth , async (req, res) => {
   await showDocument();
   res.status(200).render('admin1.pug', object);
 })
@@ -114,7 +114,7 @@ app.post("/login", async (req, res) => {
   }
 });
 
-app.get("/register", (req, res) => {
+app.get("/register",auth, (req, res) => {
   res.render("register.pug")
 });
 
