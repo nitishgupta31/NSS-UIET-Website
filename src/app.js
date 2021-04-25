@@ -114,6 +114,45 @@ app.post("/login", async (req, res) => {
   }
 });
 
+app.get("/logout", auth, async (req, res) => {
+  try {
+    console.log(req.user)
+    try {
+      req.user.tokens = req.user.tokens.filter((currentElement) => {
+        return currentElement.token !== req.token
+      })
+
+    } catch (error) {
+      console.log(error)
+    }
+
+    res.clearCookie('jwt');
+    await req.user.save();
+
+    res.render("login.pug")
+  } catch (error) {
+    res.status(500).send(error)
+  }
+
+});
+app.get("/logoutall", auth, async (req, res) => {
+  try {
+    console.log(req.user)
+    try {
+      req.user.tokens = []
+    } catch (error) {
+      console.log(error)
+    }
+
+    res.clearCookie('jwt');
+    await req.user.save();
+
+    res.render("login.pug")
+  } catch (error) {
+    res.status(500).send(error)
+  }
+
+});
 app.get("/register",auth, (req, res) => {
   res.render("register.pug")
 });
