@@ -5,27 +5,28 @@ head
   meta(name='viewport' content='width=device-width, initial-scale=1')
   link(rel='icon' type='image/png' href='../static/images/icons/favicon.ico')
   link(rel='stylesheet' type='text/css' href='static/main.css')
-  link(rel="stylesheet" href="../static/css/responsive.css")
   link(rel="stylesheet" href="../static/css/style.css")
+  link(rel="stylesheet" href="../static/css/responsive.css")
+  
   
   script(src='https://kit.fontawesome.com/a076d05399.js')
 body
   nav.navbar.footer.h-nav-resp
-        ul.nav-list.v-class-resp
-          .logo
-            img(src="../static/img/1.png" alt="logo")
-          li
-            a(href="#") Home
-          li
-            a(href="/register") Adduser
-          li
-            a(href="/#team") Team
-          li
-            a(href="/#about") About
-        .burger
-          .line
-          .line
-          .line
+    ul.nav-list.v-class-resp
+      .logo
+        img(src="../static/img/1.png" alt="logo")
+      li
+        a(href="#") Home
+      li
+            a(href="/#events") Events
+      li
+        a(href="/#team") Team
+      li
+        a(href="/#about") About
+    .burger
+      .line
+      .line
+      .line
   .limiter
     .container-login100
       .wrap-login100
@@ -52,11 +53,6 @@ body
                 | Visit NSS Website
                 i.fa.fa-long-arrow-alt-right.m-l-5(aria-hidden='true')
             
-  script(src='vendor/jquery/jquery-3.2.1.min.js')
-  script(src='vendor/bootstrap/js/popper.js')
-  script(src='vendor/bootstrap/js/bootstrap.min.js')
-  script(src='vendor/select2/select2.min.js')
-  script(src='vendor/tilt/tilt.jquery.min.js')
   script.
     $('.js-tilt').tilt({
     scale: 1.1
@@ -74,3 +70,4 @@ body
       br
       | Created by - Nitish Gupta
   script(src="../static/js/resp.js")
+  

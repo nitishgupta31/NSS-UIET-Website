@@ -9,6 +9,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const cookieParser = require('cookie-parser');
 const auth = require("../middleware/auth")
+// const login = require('../Secure-Registration-system/src/app');
 const port = process.env.PORT || 3000;
 
 // EXPRESS SPECIFIC STUFF
@@ -29,11 +30,11 @@ app.get("/", (req, res) => {
   res.render("index.pug")
 });
 
-app.post('/contact', (req, res) => {
+app.post('/contact', async (req, res) => {
   var myData = new Nsscontact(req.body);
   console.log(myData)
-  myData.save().then(item => {
-    res.send("Response Submitted");
+  await myData.save().then(item => {
+    res.status(201).redirect("/")
   }).catch(err => {
     res.status(400).send("unable to save your response try again later");
   });
@@ -78,10 +79,13 @@ app.post("/save/:id/resolved", (req, res) => {
     res.redirect("/admin1");
   });
 });
-app.get('/admin1', auth , async (req, res) => {
+app.get('/admin1', auth, async (req, res) => {
   await showDocument();
   res.status(200).render('admin1.pug', object);
 })
+app.get("/dance", auth, (req, res) => {
+  res.render("dance.pug")
+});
 app.get("/login", (req, res) => {
   res.render("login.pug")
 });
@@ -129,7 +133,7 @@ app.get("/logout", auth, async (req, res) => {
     res.clearCookie('jwt');
     await req.user.save();
 
-    res.render("login.pug")
+    res.redirect("/login")
   } catch (error) {
     res.status(500).send(error)
   }
@@ -153,7 +157,7 @@ app.get("/logoutall", auth, async (req, res) => {
   }
 
 });
-app.get("/register",auth, (req, res) => {
+app.get("/register", auth, (req, res) => {
   res.render("register.pug")
 });
 

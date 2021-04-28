@@ -43,22 +43,94 @@ html
           .col.col-2 Email
           .col.col-3 Phone
           .col.col-4 Concern
-          .col.col-5 Status
-          .col.col-6 Change status
+          //- .col.col-5 Status
+          .col.col-6 update status
         each collection in data
           li.table-row
             .col.col-1(data-label="Name")=collection.name
             .col.col-2(data-label="Email")=collection.email
             .col.col-3(data-label="Phone")=collection.phone
             .col.col-4(data-label="Concern")=collection.concern
-            .col.col-5(data-label="Status")=collection.status
+            //- .col.col-5(data-label="Status")=collection.status
             .col.col-6(data-label="Change Status")
-              form(action='/save/'+collection._id+'/pending', method="post")
-                input.pendingbutton(type="submit" value="Pending")
-              form(action='/save/'+collection._id+'/resolved', method="post")
-                input.resolvedbutton(type="submit" value="Resolved")
+              if collection.status=="Resolved"
+                form()
+                  input.resolvedbutton(value="Resolved" disabled)
+              else 
+                if collection.status==""
+                  form(action='/save/'+collection._id+'/resolved', method="post")
+                    input.pendingbutton(type="submit" value="Pending")
+                else    
+                  form(action='/save/'+collection._id+'/resolved', method="post")
+                    input.pendingbutton(type="submit" value="Pending")
             
     
+      //-  div.todo-container
+    
+      //- form.todo-header(action='/', method='POST')
+        input(type='text', name='content')
+        button(type='submit')
+          span.fas.fa-plus
+    //- div.aligntable  
+    //-   h1.list-heading= message
+
+    //-   div.tablediv
+    //-     table.table
+    //-       thead
+    //-         tr
+    //-           th(scope="col") Name
+    //-           th(scope="col") Email
+    //-           th(scope="col") Phone
+    //-           th(scope="col") Concern
+    //-           th(scope="col") Status
+    //-       tbody
+    //-         each collection in data
+    //-           tr
+    //-             th(scope="row")=collection.name
+    //-             td=collection.email
+    //-             td=collection.phone
+    //-             td=collection.concern
+    //-             td=collection.status
+              
+          //- tr
+          //-   td 1
+          //-   td Mark
+          //-   td Otto
+          //-   td @mdo
+          //- tr
+          //-   th(scope="row") 2
+          //-   td Jacob
+          //-   td Thornton
+          //-   td @fat
+          //- tr
+          //-   th(scope="row") 3
+          //-   td(colspan="2") Larry the Bird    
+    //- table.table
+      th Name
+      th Email
+      th Phone
+      th Concern
+      th status
+      each collection in data
+        tr
+          td=collection.name
+          td=collection.email
+          td=collection.phone
+          td=collection.concern
+          td
+            form(action='/save/'+collection._id, method="post")
+              input(type="text" value=collection.status name='status')
+              input(type="submit" value="submit")
+
+        //- ul.todo-list
+          each collection in data
+            li.todo-list-item=collection.name
+            li.todo-list-item=collection.concern
+                div.todo-list-item-name
+                a.edit(href='/edit/'+collection._id)
+                  span.fas.fa-edit
+                a.remove(href='todos/'+collection._id)
+                  span.fas.fa-times
     footer.footer.f
       p.text-footer
         | Copyright © - NSS UIET - All rights reserved

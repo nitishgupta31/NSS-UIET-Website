@@ -65,7 +65,73 @@ html
               .col.col-4(data-label="Concern")=collection.concern
               .col.col-5(data-label="Status")=collection.status
             
-  
+    
+      //-  div.todo-container
+    
+      //- form.todo-header(action='/', method='POST')
+        input(type='text', name='content')
+        button(type='submit')
+          span.fas.fa-plus
+    //- div.aligntable  
+    //-   h1.list-heading= message
+
+    //-   div.tablediv
+    //-     table.table
+    //-       thead
+    //-         tr
+    //-           th(scope="col") Name
+    //-           th(scope="col") Email
+    //-           th(scope="col") Phone
+    //-           th(scope="col") Concern
+    //-           th(scope="col") Status
+    //-       tbody
+    //-         each collection in data
+    //-           tr
+    //-             th(scope="row")=collection.name
+    //-             td=collection.email
+    //-             td=collection.phone
+    //-             td=collection.concern
+    //-             td=collection.status
+              
+          //- tr
+          //-   td 1
+          //-   td Mark
+          //-   td Otto
+          //-   td @mdo
+          //- tr
+          //-   th(scope="row") 2
+          //-   td Jacob
+          //-   td Thornton
+          //-   td @fat
+          //- tr
+          //-   th(scope="row") 3
+          //-   td(colspan="2") Larry the Bird    
+    //- table.table
+      th Name
+      th Email
+      th Phone
+      th Concern
+      th status
+      each collection in data
+        tr
+          td=collection.name
+          td=collection.email
+          td=collection.phone
+          td=collection.concern
+          td
+            form(action='/save/'+collection._id, method="post")
+              input(type="text" value=collection.status name='status')
+              input(type="submit" value="submit")
+
+        //- ul.todo-list
+          each collection in data
+            li.todo-list-item=collection.name
+            li.todo-list-item=collection.concern
+                div.todo-list-item-name
+                a.edit(href='/edit/'+collection._id)
+                  span.fas.fa-edit
+                a.remove(href='todos/'+collection._id)
+                  span.fas.fa-times
     footer.footer.f
       p.text-footer
         | Copyright © - NSS UIET - All rights reserved
