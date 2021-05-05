@@ -5,6 +5,7 @@ html(lang="en")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0")
 		link(rel="stylesheet" href="../static/css/style.css")
 		link(rel="stylesheet" href="../static/css/responsive.css")
+		link(rel="stylesheet" href="../static/css/aboutcards.css")
 		title NSS UIET
 	body
 		nav.navbar.footer.h-nav-resp
@@ -65,55 +66,185 @@ html(lang="en")
 				.thumbnail
 					img.imgFluid(src="../static/img/blood-donation.jpg" alt="event")
 		#team
-			.teamnssh1
+			//- .teamnssh1
 				h1 Our Team
 				hr
-			section.section.section-left
-				.paras
-					p.sectionTag.text-big Prof. Gagandeep
-					p.sectionSubTag.text-small
-						b Faculty Coordinator
-						br
-						|                     some lines from and for nitish some lines from and for nitish
-						|                     some lines from and for nitish some lines from and for nitish
-				.thumbnail-team
-					img.imgFluid(src="https://source.unsplash.com/900x900/?teacher" alt="laptop image")
-			hr
-			section.section.section-left
-				.paras
-					p.sectionTag.text-big Nitish Gupta
-					p.sectionSubTag.text-small
-						| some lines from and for nitish some lines from and for nitish
-						| some lines from and for nitish some lines from and for nitish
-				.thumbnail-team
-					img.imgFluid(src="https://source.unsplash.com/900x900/?boy" alt="laptop image")
-			hr
-			section.section.section-left
-				.paras
-					p.sectionTag.text-big Shristy
-					p.sectionSubTag.text-small
-						| some lines from and for nitish some lines from and for nitish
-						| some lines from and for nitish some lines from and for nitish
-				.thumbnail-team
-					img.imgFluid(src="https://source.unsplash.com/900x900/?girl" alt="laptop image")
-			hr
-			section.section.section-left
-				.paras
-					p.sectionTag.text-big Shubu
-					p.sectionSubTag.text-small
-						| some lines from and for nitish some lines from and for nitish
-						| some lines from and for nitish some lines from and for nitish
-				.thumbnail-team
-					img.imgFluid(src="https://source.unsplash.com/900x900/?men" alt="laptop image")
-			hr
-			section.section.section-left
-				.paras
-					p.sectionTag.text-big yajur
-					p.sectionSubTag.text-small
-						| some lines from and for nitish some lines from and for nitish
-						| some lines from and for nitish some lines from and for nitish
-				.thumbnail-team
-					img.imgFluid(src="https://source.unsplash.com/900x900/?nature" alt="laptop image")
+			section.team-section
+				.container
+					.teamnssh1
+						h1 Our Team
+						hr
+					//- .row
+						.section-title
+							h1 Our Team
+							
+					.row
+						.team-items
+							.item
+								img(src='../static/team-img/gagan-sir.jpeg' alt='team')
+								.inner
+									.info
+										h5 Prof. Gagandeep
+										p Faculty coordinator
+										.social-links
+											a(href='')
+												span.fa.fa-twitter
+											a(href='')
+												span.fa.fa-linkedin
+							.item
+								img(src='../static/team-img/nitish.jpg' alt='team')
+								.inner
+									.info
+										h5 Nitish Gupta
+										p Developer
+										.social-links
+											a(href='')
+												span.fa.fa-facebook
+											a(href='')
+												span.fa.fa-twitter
+											a(href='')
+												span.fa.fa-linkedin
+										
+							.item
+								img(src='../static/team-img/srish.jpg' alt='team')
+								.inner
+									.info
+										h5 Srishty
+										p Student Coordinator
+										.social-links
+											a(href='')
+												span.fa.fa-facebook
+											a(href='')
+												span.fa.fa-twitter
+											a(href='')
+												span.fa.fa-linkedin
+							
+							.item
+								img(src='../static/team-img/shubu.jpg' alt='team')
+								.inner
+									.info
+										h5 Shubajeet
+										p Student Coordinator
+										.social-links
+											a(href='')
+												span.fa.fa-facebook
+											a(href='')
+												span.fa.fa-twitter
+											a(href='')
+												span.fa.fa-linkedin
+
+
+			//- .container
+			//- 	.card
+			//- 		img(src='https://images.unsplash.com/photo-1611175694989-4870fafa4494?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDd8fGh0bWx8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60' alt='Person' class='card__image')
+			//- 		p(class='card__name') Lily-Grace Colley
+			//- 		.grid-container
+			//- 		ul.social-icons
+			//- 			li
+			//- 				a(href='#')
+			//- 					i.fa.fa-instagram
+			//- 			li
+			//- 				a(href='#')
+			//- 					i.fa.fa-twitter
+			//- 			li
+			//- 				a(href='#')
+			//- 					i.fa.fa-linkedin
+			//- 			li
+			//- 				a(href='#')
+			//- 					i.fa.fa-codepen
+			//- 	.card
+			//- 		img(src='https://images.unsplash.com/photo-1611175694989-4870fafa4494?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDd8fGh0bWx8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60' alt='Person' class='card__image')
+			//- 		p(class='card__name') Lily-Grace Colley
+			//- 		.grid-container
+			//- 		ul.social-icons
+			//- 			li
+			//- 				a(href='#')
+			//- 					i.fa.fa-instagram
+			//- 			li
+			//- 				a(href='#')
+			//- 					i.fa.fa-twitter
+			//- 			li
+			//- 				a(href='#')
+			//- 					i.fa.fa-linkedin
+			//- 			li
+			//- 				a(href='#')
+			//- 					i.fa.fa-codepen
+
+			//- .cards-list
+			//- 	.card
+			//- 		div(class='card_image')
+			//- 			img(src='../static/team-img/gagan-sir.jpeg')
+			//- 		div(class='card_title title-black' style="background:red;")
+			//- 			p Prof. Gagandeep 
+			//- 				br
+			//- 				| Faculty Coordinator
+			//- 	.card
+			//- 		div(class='card_image')
+			//- 			img(src='https://i.redd.it/b3esnz5ra34y.jpg')
+			//- 		div(class='card_title title-black')
+			//- 			p Shristy Takyar
+			//- 				br
+			//- 				| (Student Coordinator)
+			//- 	.card
+			//- 		div(class='card_image')
+			//- 			img(src='https://i.redd.it/b3esnz5ra34y.jpg')
+			//- 		div(class='card_title title-white')
+			//- 			p Shubajeet 
+			//- 				br
+			//- 				| Student Coordinator
+			//- 	.card
+			//- 		div(class='card_image')
+			//- 			img(src='https://i.redd.it/b3esnz5ra34y.jpg')
+			//- 		div(class='card_title title-white')
+			//- 			p Nitish Gupta
+			//- 				br
+			//- 				| Student Volunteer
+			//- section.section.section-left
+			//- 	.paras
+			//- 		p.sectionTag.text-big Prof. Gagandeep
+			//- 		p.sectionSubTag.text-small
+			//- 			b Faculty Coordinator
+			//- 			br
+			//- 			|                     some lines from and for nitish some lines from and for nitish
+			//- 			|                     some lines from and for nitish some lines from and for nitish
+			//- 	.thumbnail-team
+			//- 		img.imgFluid(src="https://source.unsplash.com/900x900/?teacher" alt="laptop image")
+			//- hr
+			//- section.section.section-left
+			//- 	.paras
+			//- 		p.sectionTag.text-big Nitish Gupta
+			//- 		p.sectionSubTag.text-small
+			//- 			| some lines from and for nitish some lines from and for nitish
+			//- 			| some lines from and for nitish some lines from and for nitish
+			//- 	.thumbnail-team
+			//- 		img.imgFluid(src="https://source.unsplash.com/900x900/?boy" alt="laptop image")
+			//- hr
+			//- section.section.section-left
+			//- 	.paras
+			//- 		p.sectionTag.text-big Shristy
+			//- 		p.sectionSubTag.text-small
+			//- 			| some lines from and for nitish some lines from and for nitish
+			//- 			| some lines from and for nitish some lines from and for nitish
+			//- 	.thumbnail-team
+			//- 		img.imgFluid(src="https://source.unsplash.com/900x900/?girl" alt="laptop image")
+			//- hr
+			//- section.section.section-left
+			//- 	.paras
+			//- 		p.sectionTag.text-big Shubu
+			//- 		p.sectionSubTag.text-small
+			//- 			| some lines from and for nitish some lines from and for nitish
+			//- 			| some lines from and for nitish some lines from and for nitish
+			//- 	.thumbnail-team
+			//- 		img.imgFluid(src="https://source.unsplash.com/900x900/?men" alt="laptop image")
+			//- hr
+			//- section.section.section-left
+			//- 	.paras
+			//- 		p.sectionTag.text-big yajur
+			//- 		p.sectionSubTag.text-small
+			//- 			| some lines from and for nitish some lines from and for nitish
+			//- 			| some lines from and for nitish some lines from and for nitish
+			//- 	.thumbnail-team
+			//- 		img.imgFluid(src="https://source.unsplash.com/900x900/?nature" alt="laptop image")
 		#about
 			.aboutnssh1
 				h1  ABOUT US
