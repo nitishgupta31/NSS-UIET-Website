@@ -1,43 +1,44 @@
 
 @media only screen and (max-width: 1140px){
-    .nav-list{
+    .nav-list100{
         flex-direction: column;
     }
-    .navbar{
+    .navbar100{
         height: 447px;
         flex-direction: column;
         transition: all 0.7s ease-out;
     }
-    .rightNav{
+    .rightNav100{
         text-align: center;
     }
-    .box-main{
+    .box-main100{
         flex-direction: column-reverse;
         max-width: 100%;
     }
 
-    .burger{
-    display: block;
+    .burger100{
+        display: block;
     }
-    .h-nav-resp{
+    .h-nav-resp100{
         height: 72px;
+        display: block;
     }
-    .v-class-resp{
+    .v-class-resp100{
         display: none;
     }
-    .section{
+    .section100{
         flex-direction: column-reverse;
     }
-    .text-small{
+    .text-small100{
         text-align: center;
     }
-    .text-big{
+    .text-big100{
         text-align: center;
     }
-    .buttons{
+    .buttons100{
         text-align: center;
     }
-    .paras {
+    .paras100 {
     padding: 0px;
 }
 }

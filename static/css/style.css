@@ -7,74 +7,74 @@
 html{
     scroll-behavior: smooth;
 }
-.logo{
+.logo100{
     width:220px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.logo img{
+.logo100 img{
     width: 26%;
     border: 3px solid white;
     border-radius: 50px;
     margin: 5px;
 }
-.navbar{
+.navbar100{
     display: flex;
     align-items: center;
     /* justify-content: center; */
-    /* position: sticky; */
+    position: sticky;
     top:0;
     cursor: pointer;
-    
+    z-index: 5;    
 }
 
-.nav-list{
+.nav-list100{
     width: 70%; 
     display: flex; 
     align-items: center;
 }
 
-.nav-list li{
+.nav-list100 li{
     list-style: none;
     padding: 26px 30px;
 }
 
-.nav-list li a{
+.nav-list100 li a{
     text-decoration: none;
     color: white;
     font-size: 20px;
     font-family: 'Ubuntu', sans-serif;
 }
 
-.nav-list li a:hover{ 
+.nav-list100 li a:hover{ 
     color: rgb(197, 194, 194);
 }
 
-.rightNav{ 
+.rightNav100{ 
     width: 30%;
     text-align: right;
     padding: 0 23px;
 }
 
-#search{
+#search100{
     padding: 5px;
     font-size: 17px;
     border: 2px solid grey;
     border-radius: 9px;
 }
 
-.background{
+.background100{
     background: rgba(0, 0, 0, 0.7) url('../img/bg.jpg');
     background-size: cover;
     background-blend-mode: darken;
 }
 
-.firstSection{
+.firstSection100{
     height: 100vh;
 }
 
-.box-main{
+.box-main100{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,18 +85,18 @@ html{
         height: 80%;
 }
 
-.firstHalf{
+.firstHalf100{
     width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.secondHalf{
+.secondHalf100{
     width: 30%;
 }
 
-.secondHalf img{
+.secondHalf100 img{
     width: 70%; 
     border: 4px solid white;
     border-radius: 150px;
@@ -104,15 +104,15 @@ html{
     margin: auto;
 }
 
-.text-big{
+.text-big100{
     font-size: 41px;
 }
 
-.text-small{
+.text-small100{
     font-size: 18px;
 }
 
-.btn{
+.btn100{
     padding: 8px 20px;
     margin: 7px 3px;
     border: 2px solid white;
@@ -124,18 +124,18 @@ html{
     font-size: 20px;
 }
 
-.btn-sm{
+.btn-sm100{
     padding: 6px 10px;
     vertical-align: middle;
     font-size: 16px;
 }
 
-.btn-dark{
+.btn-dark100{
     color: black;
         border: 2px solid grey;
 
 }
-.section{ 
+.section100{ 
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -143,43 +143,53 @@ html{
     margin: auto;
     font-family: 'Ubuntu', sans-serif;
     padding: 10px;
+    background: burlywood;
+    margin-bottom: 7px;
+    border-radius: 33px;
+}
+.about-bg100{
+    background-color: cornsilk;
+}
+#about{
+    padding: 0 0 15px;
 }
 
-.section-left{
+
+.section-left100{
     flex-direction: row-reverse;
 }
 
-.paras{
+.paras100{
     padding: 0px 65px;
 }
 
-.sectionTag{
+.sectionTag100{
     padding: 16px 0;
 }
 
-.sectionSubTag{
+.sectionSubTag100{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.thumbnail img{
+.thumbnail100 img{
     width: 250px;
     border: 2px solid black;
     border-radius: 26px;
     margin-top: 19px;
 }
 
-.thumbnail-team img{
+.thumbnail-team100 img{
     width: 150px;
     border: 2px solid black;
     border-radius: 150px;
     margin-top: 19px;
 }
 
-.contact{
+.contact100{
     background-color: #f6f5f4;
     height: 533px;
     padding-top: 43px;
 }
-.text-center{
+.text-center100{
 
     text-align: center;
     padding-top: 30px;
@@ -187,12 +197,12 @@ html{
        font-size: 35px;
 }
 
-.form{
+.form100{
     max-width: 62%;
     margin: 25px auto;
 }
 
-.form-input{
+.form-input100{
     margin: 14px 0;
     padding: 5px 13px;
     width: 100%; 
@@ -201,7 +211,7 @@ html{
     border-radius: 6px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.text-footer{
+.text-footer100{
     text-align: center;
     padding: 30px 0;
    font-family: 'Ubuntu', sans-serif; 
@@ -211,14 +221,14 @@ html{
    
 }
 
-.burger{
+.burger100{
     display: none;
     position: absolute;
     cursor: pointer;
     right: 5%;
     top:15px;
 }
-.line{
+.line100{
     width: 33px;
     background-color: white;
     height: 4px;
@@ -226,37 +236,49 @@ html{
 }
 
 
-#team{
+#team100{
     padding-top: 58px;
 }
 
-.eventnssheading1 {
+.eventnssheading1100 {
 	margin: 20px 0px;
 	text-align: center;
 	margin-top: 0;
 	padding-top: 80px;
 }
 
-.teamnssh1{
+.teamnssh1100{
     margin: 20px 0px;
     text-align: center;
     background-color: black; 
     color: rgb(255, 255, 255);
     margin-top: 0;
-    padding: 25px;
-
+    padding: 1px;
+    border-radius: 18px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
-.aboutnssh1{
+.aboutnssh1100{
     margin: 20px 0px;
     text-align: center;
     background-color: black; 
     color: rgb(255, 255, 255);
     margin-top: 0;
-    padding: 25px;
+    padding: 1px;
+    width: 79%;
+    margin: auto;
+    margin-top: 45px;
+    margin-bottom: 25px;
+    border-radius: 18px;
 
 }
-
-
-.footer{
+.footer100{
     background-color: black;
+}
+@media (min-width: 992px){
+    .navbar li {
+        margin-left : 1em;
+        margin-right : 1em;
+    }
 }

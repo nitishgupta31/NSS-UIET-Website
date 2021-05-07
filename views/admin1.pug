@@ -2,9 +2,9 @@ doctype html
 html
   head
     title Admin Zone
-    //- link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous")
     link(rel='stylesheet', href='/static/styleadmin1.css', type='text/css')
     link(href='https://fonts.googleapis.com/css?family=Baloo+Bhai|Candal|Chewy&display=swap', rel='stylesheet')
+    link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous")
     link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.8.2/css/all.css', integrity='sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay', crossorigin='anonymous')
     link(rel="stylesheet" href="./static/tablestyle.css")
     link(rel="stylesheet" href="./static/css/style.css")
@@ -12,57 +12,94 @@ html
     
     
   body
-    nav.navbar.footer.h-nav-resp
-      ul.nav-list.v-class-resp
-        .logo
-          img(src="../static/img/1.png" alt="logo")
-        li
-          a(href="#") Home
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.sticky-top
+      .container-fluid
+        a.navbar-brand(href='#')
+          img(src='../static/img/1.png' height='28' alt='NSS UIET logo')
+          |  NSS UIET
+        //- a.navbar-brand(href='#') NSS UIET
+        button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarSupportedContent.collapse.navbar-collapse
+          ul.navbar-nav.me-auto.mb-2.mb-lg-0
+            li.nav-item
+              a.nav-link(aria-current='page' href='#') 
+                b Home
+            li.nav-item
+              a.nav-link(href='/#events') 
+                b Events
+            li.nav-item
+              a.nav-link(href='/#team') 
+                b Team
+            li.nav-item
+              a.nav-link(href='/#about')
+                b About
+            li.nav-item
+              a.nav-link(href='/#contact') 
+                b Contact
+            li.nav-item
+              a.nav-link(href="/register") 
+                b Add_Admin
+            li.nav-item.dropdown
+              a#navbarDropdown-dark.nav-link.dropdown-toggle(href='' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+                | Logout
+              ul.dropdown-menu(aria-labelledby='navbarDropdown')
+                li
+                  a.dropdown-item(href='/logout') Logout
+                li
+                  a.dropdown-item(href='/logoutall') Logout from all devices
+           
+    //- nav.navbar.footer.h-nav-resp
+    //-   ul.nav-list.v-class-resp
+    //-     .logo
+    //-       img(src="../static/img/1.png" alt="logo")
+    //-     li
+    //-       a(href="#") Home
         
-        li
-          a(href="/#team") Team
-        li
-          a(href="/#about") About
-        li
-          a(href="/register") Add_Admin
-        li
-          a(href="/logout") logout
-        //- li
-          a(href="/logoutall") logoutall
-      .burger
-        .line
-        .line
-        .line
-    .container
+    //-     li
+    //-       a(href="/#team") Team
+    //-     li
+    //-       a(href="/#about") About
+    //-     li
+    //-       a(href="/register") Add_Admin
+    //-     li
+        //-   a(href="/logout") logout
+        //- //- li
+        //-   a(href="/logoutall") logoutall
+    //-   .burger
+    //-     .line
+    //-     .line
+    //-     .line
+    .container100
       h2
         | Contact Queries 
         small NSS UIET
-      ul.responsive-table
-        li.table-header
-          .col.col-1 Name
-          .col.col-2 Email
-          .col.col-3 Phone
-          .col.col-4 Concern
+      ul.responsive-table100
+        li.table-header100
+          .col100.col-1100 Name
+          .col100.col-2100 Email
+          .col100.col-3100 Phone
+          .col100.col-4100 Concern
           //- .col.col-5 Status
-          .col.col-6 update status
+          .col100.col-6100 update status
         each collection in data
-          li.table-row
-            .col.col-1(data-label="Name")=collection.name
-            .col.col-2(data-label="Email")=collection.email
-            .col.col-3(data-label="Phone")=collection.phone
-            .col.col-4(data-label="Concern")=collection.concern
+          li.table-row100
+            .col100.col-1100(data-label="Name")=collection.name
+            .col100.col-2100(data-label="Email")=collection.email
+            .col100.col-3100(data-label="Phone")=collection.phone
+            .col100.col-4100(data-label="Concern")=collection.concern
             //- .col.col-5(data-label="Status")=collection.status
-            .col.col-6(data-label="Change Status")
+            .col100.col-6100(data-label="Change Status")
               if collection.status=="Resolved"
                 form()
-                  input.resolvedbutton(value="Resolved" disabled)
+                  input.resolvedbutton100(value="Resolved" disabled)
               else 
                 if collection.status==""
                   form(action='/save/'+collection._id+'/resolved', method="post")
-                    input.pendingbutton(type="submit" value="Pending")
+                    input.pendingbutton100(type="submit" value="Pending")
                 else    
                   form(action='/save/'+collection._id+'/resolved', method="post")
-                    input.pendingbutton(type="submit" value="Pending")
+                    input.pendingbutton100(type="submit" value="Pending")
             
     
       //-  div.todo-container
@@ -131,9 +168,10 @@ html
                   span.fas.fa-edit
                 a.remove(href='todos/'+collection._id)
                   span.fas.fa-times
-    footer.footer.f
-      p.text-footer
+    footer.footer100.f100
+      p.text-footer100
         | Copyright © - NSS UIET - All rights reserved
         br
         | Created by - Nitish Gupta
-    script(src="../static/js/resp.js")
+    //- script(src="../static/js/resp.js")
+    script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js' integrity='sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW' crossorigin='anonymous')

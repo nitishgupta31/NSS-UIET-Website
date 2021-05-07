@@ -4,27 +4,37 @@ head
   meta(charset='UTF-8')
   meta(name='viewport' content='width=device-width, initial-scale=1')
   link(rel='icon' type='image/png' href='../static/images/icons/favicon.ico')
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1' crossorigin='anonymous')
   link(rel='stylesheet' type='text/css' href='../static/main.css')
   link(rel="stylesheet" href="../static/css/style.css") 
   link(rel="stylesheet" href="../static/css/responsive.css")
   script(src='https://kit.fontawesome.com/a076d05399.js')
 body
-  nav.navbar.footer.h-nav-resp
-        ul.nav-list.v-class-resp
-          .logo
-            img(src="../static/img/1.png" alt="logo")
-          li
-            a(href="/admin1") Home
-          li
-            a(href="/#team") Team
-          li
-            a(href="/#about") About
-          li
-            a(href="/register") Add Admin
-        .burger
-          .line
-          .line
-          .line
+  nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.sticky-top
+    .container-fluid
+      a.navbar-brand(href='#')
+        img(src='../static/img/1.png' height='28' alt='NSS UIET logo')
+        |  NSS UIET
+      //- a.navbar-brand(href='#') NSS UIET
+      button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarSupportedContent.collapse.navbar-collapse
+        ul.navbar-nav.me-auto.mb-2.mb-lg-0
+          li.nav-item
+            a.nav-link(aria-current='page' href='#') 
+              b Home
+          li.nav-item
+            a.nav-link(href='/#events') 
+              b Events
+          li.nav-item
+            a.nav-link(href='/#team') 
+              b Team
+          li.nav-item
+            a.nav-link(href='/#about')
+              b About
+          li.nav-item
+            a.nav-link(href='/#contact') 
+              b Contact
   .limiter
     .container-login100
       .wrap-login100
@@ -65,12 +75,12 @@ body
               | ADD
             
               
-  footer.footer
-    p.text-footer
+  footer.footer100
+    p.text-footer100
       | Copyright © - NSS UIET - All rights reserved
       br
       | Created by - Nitish Gupta
-  script(src="../static/js/resp.js")
+  //- script(src="../static/js/resp.js")
   script.
     $('.js-tilt').tilt({
     scale: 1.1
@@ -82,3 +92,4 @@ body
     gtag('js', new Date());
     gtag('config', 'UA-23581568-13');
   script(src='js/main.js')
+  script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js' integrity='sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW' crossorigin='anonymous')

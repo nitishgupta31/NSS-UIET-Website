@@ -110,11 +110,12 @@ app.post("/login", async (req, res) => {
       res.status(201).redirect("/admin1")
     }
     else {
-      res.status(400).send("invalid credentials")
+      res.status(201).redirect("/login")
+      // res.status(400).send("invalid credentials")
 
     }
   } catch (error) {
-    res.status(400).send("invalid credentials")
+    res.status(201).redirect("/login")
   }
 });
 

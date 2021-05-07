@@ -3,115 +3,155 @@ html(lang="en")
 	head
 		meta(charset="UTF-8")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		link(rel='icon' type='image/png' href='https://nss.gov.in/sites/default/files/u8VhQRwU_400x400.jpg')
+		link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1' crossorigin='anonymous')
 		link(rel="stylesheet" href="../static/css/style.css")
 		link(rel="stylesheet" href="../static/css/responsive.css")
 		link(rel="stylesheet" href="../static/css/aboutcards.css")
+		
+		
 		title NSS UIET
 	body
-		nav.navbar.footer.h-nav-resp
-			ul.nav-list.v-class-resp
-				.logo
-					img(src="../static/img/1.png" alt="logo")
-				li
-					a(href="#") Home
-				li
-					a(href="#events") Events
-				li
-					a(href="#team") Team
-				li
-					a(href="#about") About
-				li
-					a(href="#contact") Contact Us
-			.burger
-				.line
-				.line
-				.line
-		section.background.firstSection
-			.box-main
-				.firstHalf
-					p.text-big NOT ME, BUT YOU
-					p.text-small
+		nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.sticky-top
+			.container-fluid
+				a.navbar-brand(href='#')
+					img(src='../static/img/1.png' height='28' alt='NSS UIET logo')
+					|  NSS UIET
+				//- a.navbar-brand(href='#') NSS UIET
+				button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+					span.navbar-toggler-icon
+				#navbarSupportedContent.collapse.navbar-collapse
+					ul.navbar-nav.me-auto.mb-2.mb-lg-0
+						li.nav-item
+							a.nav-link(aria-current='page' href='#') Home
+						li.nav-item
+							a.nav-link(href='#events') Events
+						li.nav-item
+							a.nav-link(href='#team') Team
+						li.nav-item
+							a.nav-link(href='#about') About
+						li.nav-item
+							a.nav-link(href='#contact') Contact
+						li.nav-item
+							a.nav-link(href='/login') Admin Pannel
+					
+		
+		//- nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.sticky-top
+		//- 	a.navbar-brand(href='#') Navbar
+		//- 	button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+		//- 		span.navbar-toggler-icon
+		//- 	#navbarSupportedContent.collapse.navbar-collapse
+		//- 		ul.navbar-nav.mr-auto
+		//- 			li.nav-item.active
+		//- 				a.nav-link(href='#') Home 
+		//- 					span.sr-only (current)
+		//- 			li.nav-item
+		//- 				a.nav-link(href='#') Link
+		//- 			li.nav-item.dropdown
+		//- 				a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+		//- 					| Dropdown
+		//- 				.dropdown-menu(aria-labelledby='navbarDropdown')
+		//- 					a.dropdown-item(href='#') Action
+		//- 					a.dropdown-item(href='#') Another action
+		//- 					.dropdown-divider
+		//- 					a.dropdown-item(href='#') Something else here
+		//- 			li.nav-item
+		//- 				a.nav-link.disabled(href='#') Disabled
+		//- 		form.form-inline.my-2.my-lg-0
+		//- 			input.form-control.mr-sm-2(type='search' placeholder='Search' aria-label='Search')
+		//- 			button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search
+
+		//- nav.navbar.footer.h-nav-resp
+		//- 	ul.nav-list.v-class-resp
+		//- 		.logo
+		//- 			img(src="../static/img/1.png" alt="logo")
+		//- 		li
+		//- 			a(href="#") Home
+		//- 		li
+		//- 			a(href="#events") Events
+		//- 		li
+		//- 			a(href="#team") Team
+		//- 		li
+		//- 			a(href="#about") About
+		//- 		li
+		//- 			a(href="#contact") Contact Us
+		//- 	.burger
+		//- 		.line
+		//- 		.line
+		//- 		.line
+		section.background100.firstSection100
+			.box-main100
+				.firstHalf100
+					p.text-big100 NOT ME, BUT YOU
+					p.text-small100
 						| The programme aims to inculcate social welfare in students, and to provide service
 						| to society without bias.
-				.secondHalf
+				.secondHalf100
 					img(src="../static/img/img.png" alt="NSS")
 		#events
-			.eventnssheading1
+			.eventnssheading1100
 				h1  Activities/Events
 				hr
-			section.section
-				.paras
-					p.sectionTag.text-big Plantation Drive
-					p.sectionSubTag.text-small
+			section.section100
+				.paras100
+					p.sectionTag100.text-big100 Plantation Drive
+					p.sectionSubTag100.text-small100
 						| Eminence and Inspiration were the words that resonated when NSS-UIET Unit conducted “Tree Plantation Drive” in collaboration with Global Warming Reduction Center, accompanying the student volunteers in the college premises.
 						
-				.thumbnail
+				.thumbnail100
 					img.imgFluid(src="../static/img/plantation.jpg" alt="event")
-			section.section
-				.paras
-					p.sectionTag.text-big Cleanliness Drive
-					p.sectionSubTag.text-small
+			section.section100
+				.paras100
+					p.sectionTag100.text-big100 Cleanliness Drive
+					p.sectionSubTag100.text-small100
 						| Such drives are a wonderful opportunity for people’s participation and they are major avenues to raise awareness on the importance of cleanliness in one’s neighbourhood.
 						| Cleanliness drive programme on 
 						| Swachh Bharat Abhiyan 
 						| was organised by NSS-UIET 
 						| unit in collaboration with Unnat Bharat Abhiyan in campus.
-				.thumbnail
+				.thumbnail100
 					img.imgFluid(src="../static/img/cleanliness-drive.jpg" alt="event")
-			section.section
-				.paras
-					p.sectionTag.text-big Blood Donation Camp
-					p.sectionSubTag.text-small
+			section.section100
+				.paras100
+					p.sectionTag100.text-big100 Blood Donation Camp
+					p.sectionSubTag100.text-small100
 						| The NSS unit of UIET,Panjab University,Chandigarh organized a blood donation camp in collaboration with blood bank of PGIMER. The camp began with a short inaugural function where in Dr. Sanjay Vohra and his five member team was given a floral welcome.
-				.thumbnail
-					img.imgFluid(src="../static/img/blood-donation.jpg" alt="event")
+				.thumbnail100
+					img.imgFluid100(src="../static/img/blood-donation.jpg" alt="event")
 		#team
 			//- .teamnssh1
 				h1 Our Team
 				hr
-			section.team-section
-				.container
-					.teamnssh1
+			section.team-section100
+				.container100
+					.teamnssh1100
 						h1 Our Team
 						hr
 					//- .row
 						.section-title
 							h1 Our Team
 							
-					.row
-						.team-items
-							.item
+					.row100
+						.team-items100
+							.item100
 								img(src='../static/team-img/gagan-sir.jpeg' alt='team')
-								.inner
-									.info
+								.inner100
+									.info100
 										h5 Prof. Gagandeep
 										p Faculty coordinator
-										.social-links
-											a(href='')
-												span.fa.fa-twitter
-											a(href='')
-												span.fa.fa-linkedin
-							.item
-								img(src='../static/team-img/nitish.jpg' alt='team')
-								.inner
-									.info
-										h5 Nitish Gupta
-										p Developer
-										.social-links
-											a(href='')
-												span.fa.fa-facebook
+										.social-links100
 											a(href='')
 												span.fa.fa-twitter
 											a(href='')
 												span.fa.fa-linkedin
 										
-							.item
+							.item100
 								img(src='../static/team-img/srish.jpg' alt='team')
-								.inner
-									.info
+								.inner100
+									.info100
 										h5 Srishty
 										p Student Coordinator
-										.social-links
+										.social-links100
 											a(href='')
 												span.fa.fa-facebook
 											a(href='')
@@ -119,20 +159,32 @@ html(lang="en")
 											a(href='')
 												span.fa.fa-linkedin
 							
-							.item
+							.item100
 								img(src='../static/team-img/shubu.jpg' alt='team')
-								.inner
-									.info
-										h5 Shubajeet
+								.inner100
+									.info100
+										h5 Subhajeet
 										p Student Coordinator
-										.social-links
+										.social-links100
 											a(href='')
 												span.fa.fa-facebook
 											a(href='')
 												span.fa.fa-twitter
 											a(href='')
 												span.fa.fa-linkedin
-
+							.item100
+								img(src='../static/team-img/nitish.jpg' alt='team')
+								.inner100
+									.info100
+										h5 Nitish Gupta
+										p Website Developer
+										.social-links100
+											a(href='')
+												span.fa.fa-facebook
+											a(href='')
+												span.fa.fa-twitter
+											a(href='')
+												span.fa.fa-linkedin
 
 			//- .container
 			//- 	.card
@@ -246,42 +298,44 @@ html(lang="en")
 			//- 	.thumbnail-team
 			//- 		img.imgFluid(src="https://source.unsplash.com/900x900/?nature" alt="laptop image")
 		#about
-			.aboutnssh1
+			.aboutnssh1100
 				h1  ABOUT US
 				hr
-			section.section
-				.paras
-					p.sectionTag.text-big Lets Grow Together
-					p.sectionSubTag.text-small
+			section.section100.about-bg100
+				.paras100
+					p.sectionTag100.text-big100 Lets Grow Together
+					p.sectionSubTag.text-small100
 						| The National Service Scheme (NSS) is an Indian government-sponsored
 						| flagship for public service program conducted by the Ministry of Youth Affairs and Sports of the Government of India.
 						| Popularly known as NSS, the scheme was launched in Gandhiji's Centenary year in 1969. Aimed at developing student's personality
 						| through community service, NSS is a voluntary association of young people in Colleges,
 						| Universities and at +2 level working for a campus-community (esp. Villages) linkage.
-					p.sectionSubTag.text-small
+					p.sectionSubTag100.text-small100
 						| Matteo Ricci (left) and Xu Guangqi (right) in the Chinese edition of Euclid's Elements published in
 						| 1607
 						| Plato founded the Academy in Athens, the first institution of higher learning in Europe.
-				.thumbnail
-					img.imgFluid(src="https://source.unsplash.com/900x900/?infra" alt="laptop image")
+				.thumbnail100
+					img.imgFluid100(src="https://source.unsplash.com/900x900/?infra" alt="laptop image")
 		div
-			section#contact.contact
-				h1.text-center Contact Us
-				form(action= "/contact", method= "post", class= "form")
-					input#name.form-input(type="text" name="name" placeholder="Enter Your name")
-					input#phone.form-input(type="text" name="phone" placeholder="Enter Your Phone")
-					input#email.form-input(type="email" name="email" placeholder="Enter Your email")
-					textarea#text.form-input(name="concern" cols="30" rows="10" placeholder="Ellaborate your concern" style="height: 77px;resize: none;")
-					button.btn.btn-sm.btn-dark Submit
+			section#contact.contact100
+				h1.text-center100 Contact Us
+				form(action= "/contact", method= "post", class= "form100")
+					input#name.form-input100(type="text" name="name" placeholder="Enter Your name")
+					input#phone.form-input100(type="text" name="phone" placeholder="Enter Your Phone")
+					input#email.form-input100(type="email" name="email" placeholder="Enter Your email")
+					textarea#text.form-input100(name="concern" cols="30" rows="10" placeholder="Ellaborate your concern" style="height: 77px;resize: none;")
+					button.btn100.btn-sm100.btn-dark100 Submit
 				//- .form
 					input#name.form-input(type="text" name="name" placeholder="Enter Your name")
 					input#phone.form-input(type="text" name="phone" placeholder="Enter Your Phone")
 					input#email.form-input(type="email" name="email" placeholder="Enter Your email")
 					textarea#text.form-input(name="text" cols="30" rows="10" placeholder="Ellaborate your concern" style="height: 77px;resize: none;")
 					button.btn.btn-sm.btn-dark Submit
-		footer.footer
-			p.text-footer
+		
+		footer.footer100
+			p.text-footer100
 				| Copyright © - NSS UIET - All rights reserved
 				br
 				| Created by - Nitish Gupta
 		script(src="../static/js/resp.js")
+		script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js' integrity='sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW' crossorigin='anonymous')

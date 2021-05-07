@@ -8,29 +8,29 @@ body{
 	box-sizing: border-box;
 }
 
-.team-section{
+.team-section100{
 	background-color:#c5c5c5;
 	min-height: 100vh;
 	padding:70px 15px 88px;
 }
 
-.container{
+.container100{
 	max-width: 1170px;
 	margin:auto;
 }
 
-.row{
+.row100{
 	display: flex;
 	flex-wrap: wrap;
 }
 
-.team-section .section-title{
+.team-section100 .section-title100{
 	flex-basis: 100%;
 	max-width: 100%;
 	margin-bottom: 70px;
 }
 
-.team-section .section-title h1{
+.team-section100 .section-title100 h1{
 	font-size: 40px;
 	text-align: center;
 	margin:0;
@@ -38,13 +38,13 @@ body{
 	font-weight: 700;
 }
 
-.team-section .section-title p{
+.team-section100 .section-title100 p{
 	font-size:16px;
 	text-align: center;
 	margin:15px 0 0;
 	color:#ffffff;
 }
-.team-section .team-items{
+.team-section100 .team-items100{
 	
 	flex-basis: 100%;
 	max-width: 100%;
@@ -52,24 +52,24 @@ body{
 	flex-wrap: wrap;
 	justify-content: space-around;
 }
-.team-section .team-items .item{
+.team-section100 .team-items100 .item100{
  flex-basis: calc(25% - 30px);
  max-width: calc(25% - 30px);
  transition: all .5s ease;
  margin-bottom: 40px;
 }
-.team-section .team-items .item img{
+.team-section100 .team-items100 .item100 img{
 	display: block;
 	width: 100%;
 	border-radius: 8px;
 }
 
-.team-section .team-items .item .inner{
+.team-section100 .team-items100 .item100 .inner100{
 	position: relative;
-	z-index: 11;
+	z-index: 4;
 	padding:0 15px;
 }
-.team-section .team-items .item .inner .info{
+.team-section100 .team-items100 .item100 .inner100 .info100{
 	background-color:#000000;
 	text-align: center;
 	padding: 7px 15px;
@@ -77,30 +77,30 @@ body{
 	transition: all .5s ease;
 	margin-top: -40px;
 }
-.team-section .team-items .item:hover  .info{
+.team-section100 .team-items100 .item100:hover  .info100{
     transform: translateY(-20px);
 }
-.team-section .team-items .item:hover{
+.team-section100 .team-items100 .item100:hover{
  transform: translateY(-10px);	
 }
-.team-section .team-items .item .inner .info h5{
+.team-section100 .team-items100 .item100 .inner100 .info100 h5{
 	margin:0;
 	font-size: 18px;
 	font-weight: 600;
 	color:#ffffff;
 }
-.team-section .team-items .item .inner .info p{
+.team-section100 .team-items100 .item100 .inner100 .info100 p{
 	font-size: 16px;
 	font-weight: 400;
 	color:#c5c5c5;
 	margin:10px 0 0;
 }
 
-.team-section .team-items .item .inner .info .social-links{
+.team-section100 .team-items100 .item100 .inner100 .info100 .social-links100{
 	padding-top: 15px;
 }
 
-.team-section .team-items .item .inner .info .social-links a{
+.team-section100 .team-items100 .item100 .inner100 .info100 .social-links100 a{
 	display: inline-block;
 	height: 32px;
 	width: 32px;
@@ -114,13 +114,13 @@ body{
 	transition: all .5s ease;
 }
 
-.team-section .team-items .item .inner .info .social-links a:hover{
+.team-section100 .team-items100 .item100 .inner100 .info100 .social-links100 a:hover{
 	box-shadow: 0 0 10px #000;
 }
 
 /*responsive*/
 @media(max-width: 991px){
-	.team-section .team-items .item{
+	.team-section100 .team-items100 .item100{
       flex-basis: calc(50% - 30px);
        max-width: calc(50% - 30px);
 
@@ -128,7 +128,7 @@ body{
 }
 
 @media(max-width: 767px){
-	.team-section .team-items .item{
+	.team-section100 .team-items100 .item100{
       flex-basis: calc(100%);
        max-width: calc(100%);
 
