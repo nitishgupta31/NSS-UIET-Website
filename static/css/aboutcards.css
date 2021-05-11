@@ -10,8 +10,8 @@ body{
 
 .team-section100{
 	background-color:#c5c5c5;
-	min-height: 100vh;
-	padding:70px 15px 88px;
+	/* min-height: 100vh; */
+	padding:70px 15px 60px;
 }
 
 .container100{

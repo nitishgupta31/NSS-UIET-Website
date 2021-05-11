@@ -151,7 +151,8 @@ html{
     background-color: cornsilk;
 }
 #about{
-    padding: 0 0 15px;
+    /* padding: 0 0 15px; */
+    margin: 48px 0;
 }
 
 
@@ -244,14 +245,16 @@ html{
 	margin: 20px 0px;
 	text-align: center;
 	margin-top: 0;
-	padding-top: 80px;
+	/* padding-top: 80px; */
 }
-
+#events{
+    margin: 46px 0;
+}
 .teamnssh1100{
     margin: 20px 0px;
     text-align: center;
-    background-color: black; 
-    color: rgb(255, 255, 255);
+    /* background-color: black; 
+    color: rgb(255, 255, 255); */
     margin-top: 0;
     padding: 1px;
     border-radius: 18px;
@@ -262,8 +265,8 @@ html{
 .aboutnssh1100{
     margin: 20px 0px;
     text-align: center;
-    background-color: black; 
-    color: rgb(255, 255, 255);
+    /* background-color: black; 
+    color: rgb(255, 255, 255); */
     margin-top: 0;
     padding: 1px;
     width: 79%;
