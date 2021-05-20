@@ -5,7 +5,7 @@
     box-sizing: border-box;
     padding: 0;
 }
-#logo{
+/* #logo{
     display: flex;
     color: white;
     align-items: center;
@@ -19,12 +19,12 @@
 }
 #navbar{
     font-family: 'Yeon Sung' ;
-    padding: 13px 14px;
+    padding: 13px 14px; */
     /* background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
     background: -o-linear-gradient(-135deg, #c850c0, #4158d0);
     background: -moz-linear-gradient(-135deg, #c850c0, #4158d0);
     background: linear-gradient(-135deg, #c850c0, #4158d0); */
-    background: #170d0d;
+    /* background: #170d0d;
 }
 #navbar ul{
     display: flex;
@@ -41,7 +41,7 @@
 }
 #navbar li a:hover{
     color: rgb(219, 223, 9);  
-}
+} */
 
 #introSection{
     color: white;
