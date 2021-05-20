@@ -79,6 +79,28 @@ app.post("/save/:id/resolved", (req, res) => {
     res.redirect("/admin1");
   });
 });
+app.post("/save/:id/seen", (req, res) => {
+  console.log(req.body);
+  console.log(res)
+  const id = req.params.id;
+  Nsscontact.findByIdAndUpdate(id, {
+    status: "Seen"
+  }, err => {
+    if (err) return res.send(500, err);
+    res.redirect("/admin1");
+  });
+});
+app.get('/delete/:_id', function (req, res) {
+  Nsscontact.findByIdAndDelete(req.params, function (err, results) {
+      if (err) {
+          return res.send(500, err);
+      }
+      else {
+          res.redirect('/admin1');
+      }
+  });
+
+});
 app.get('/admin1', auth, async (req, res) => {
   await showDocument();
   res.status(200).render('admin1.pug', object);

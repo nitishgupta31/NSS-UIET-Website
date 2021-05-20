@@ -18,6 +18,7 @@ h2 small {
 }
 .responsive-table100{
     text-align: center;
+    padding: 0rem 1rem 1rem 1rem;
 }
 .responsive-table100 li {
     border-radius: 3px;
@@ -101,6 +102,21 @@ input.resolvedbutton100:hover{
     color: rgb(255, 255, 255);
     cursor: default;
 }
+.del-button100{
+    background: #f00;
+    width: 35px;
+    color: white;
+}
+.seen-button100{
+    background: rgb(255, 239, 1);
+    width: 35px;
+    color: rgb(0, 0, 0);
+}
+.resolved-button100{
+    background: rgba(54, 168, 30);
+    width: 35px;
+    color: white;
+}
 @media all and (max-width: 1140px) {
     .responsive-table100 .table-header100 {
         display: none;
@@ -108,6 +124,7 @@ input.resolvedbutton100:hover{
     .responsive-table100 li {
         display: block;
     }
+    
     .responsive-table100 .col100 {
         flex-basis: 100%;
     }
@@ -115,6 +132,7 @@ input.resolvedbutton100:hover{
         display: flex;
         padding: 10px 0;
     }
+    
     .responsive-table100 .col100:before {
         color: #6c7a89;
         padding-right: 10px;
