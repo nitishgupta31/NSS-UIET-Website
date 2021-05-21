@@ -12,6 +12,16 @@ html(lang="en")
 		
 		title NSS UIET
 	body
+		if err!=undefined 
+			.alert.alert-warning.alert-dismissible.fade.show.mb-0(role='alert')
+				strong=err
+				button.btn-close(type='button' data-bs-dismiss='alert' aria-label='Close')
+		else
+		if sucessed!=undefined 
+			.alert.alert-success.alert-dismissible.fade.show.mb-0(role='alert')
+				strong=sucessed
+				button.btn-close(type='button' data-bs-dismiss='alert' aria-label='Close')
+		else
 		nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.sticky-top
 			.container-fluid
 				a.navbar-brand(href='#')
@@ -35,7 +45,6 @@ html(lang="en")
 						li.nav-item
 							a.nav-link(href='/admin1') Admin Panel
 					
-		
 		//- nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.sticky-top
 		//- 	a.navbar-brand(href='#') Navbar
 		//- 	button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')

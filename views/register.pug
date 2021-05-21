@@ -41,22 +41,28 @@ body
         .login100-pic.js-tilt(data-tilt='')
           img(src='../static/images/img-01.png' alt='IMG')
         form(action= "/register", method= "post", class= "login100-form validate-form")
+          if err!=undefined
+            .alert.alert-danger.alert-dismissible.fade.show(role='alert')
+              strong=err
+              button.btn-close(type='button' data-bs-dismiss='alert' aria-label='Close')
           span.login100-form-title
             | Add New Admin
 
           .wrap-input100.validate-input(data-validate='Valid email is required: ex@abc.xyz')
-            <input type="text" class="myInput input100" name="name" placeholder="Enter your name..">
+            input.myInput.input100(type='text' name='name' placeholder='Enter your name..' value= name=!undefined ? name : "")
+
             span.symbol-input100
                 i.fa.fa-user-alt(aria-hidden='true')
           
           .wrap-input100.validate-input(data-validate='Valid email is required: ex@abc.xyz')
-            <input type="phone" class="myInput input100" name="phone" placeholder="phone..">
-              span.symbol-input100
-                i.fa.fa-phone-alt(aria-hidden='true')
+            input.myInput.input100(type='phone' name='phone' placeholder='phone..' value= phone=!undefined ? phone : "")
+            span.symbol-input100
+              i.fa.fa-phone-alt(aria-hidden='true')
 
 
           .wrap-input100.validate-input(data-validate='Valid email is required: ex@abc.xyz')
-            <input type="email" class="myInput input100" name="email" placeholder="Enter your email..">
+            //- <input type="email" class="myInput input100" name="email" placeholder="Enter your email..">
+            input.myInput.input100(type='email' name='email' placeholder='Enter your email..' value= email =!undefined ? email : "")
             span.symbol-input100
               i.fa.fa-envelope(aria-hidden='true')
           

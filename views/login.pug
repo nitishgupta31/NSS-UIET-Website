@@ -41,11 +41,17 @@ body
       .wrap-login100
         .login100-pic.js-tilt(data-tilt='')
           img(src='../static/images/img-01.png' alt='IMG')
+        
         form.login100-form.validate-form(action= "/login", method= "post", class= "myForm")
+          if err!=undefined
+            .alert.alert-danger.alert-dismissible.fade.show(role='alert')
+              strong=err
+              button.btn-close(type='button' data-bs-dismiss='alert' aria-label='Close')
+
           span.login100-form-title
             | Member Login
           .wrap-input100.validate-input(data-validate='Valid email is required: ex@abc.xyz')
-            input.input100(type='text' name='email' placeholder='Email')
+            input.input100(type='text' name='email' placeholder='Email' , value= email =!undefined ? email : "")
             span.focus-input100
             span.symbol-input100
               i.fa.fa-envelope(aria-hidden='true')

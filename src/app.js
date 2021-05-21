@@ -33,12 +33,20 @@ app.get("/", (req, res) => {
 app.post('/contact', async (req, res) => {
   var myData = new Nsscontact(req.body);
   console.log(myData)
-  await myData.save().then(item => {
-    res.status(201).redirect("/")
-  }).catch(err => {
-    res.status(400).send("unable to save your response try again later");
-  });
+  if (!req.body.email || !req.body.concern || !req.body.phone || !req.body.name) {
+    res.status(200).render("index.pug", { 'err': "Please try again" })
+  } else {
+    await myData.save().then(item => {
+      res.status(200).render("index.pug", { 'sucessed': "Thanks for sending your Query" })
+    }).catch(err => {
+      res.status(400).send("unable to save your response try again later");
+    });
+  }
 })
+
+app.get("/contact", (req, res) => {
+  res.redirect("/#contact");
+});
 
 // rendering login page
 app.get("/login", (req, res) => {
@@ -66,12 +74,14 @@ app.post("/login", async (req, res) => {
       res.status(201).redirect("/admin1")
     }
     else {
-      res.status(201).redirect("/login")
+      res.status(200).render("login.pug", { 'err': "Invalid Credentials" ,"email": req.body.email})
+      // res.status(201).redirect("/login")
       // res.status(400).send("invalid credentials")
 
     }
   } catch (error) {
-    res.status(201).redirect("/login")
+    res.status(200).render("login.pug", { 'err': "Invalid Credentials" ,"email": req.body.email})
+    // res.status(201).redirect("/login")
   }
 });
 
@@ -201,11 +211,13 @@ app.get("/register", auth, (req, res) => {
 });
 
 // Posting data of new admin to database
-app.post('/register', auth,async (req, res) => {
+app.post('/register', auth, async (req, res) => {
   try {
+    email=req.body.email;
+    name=req.body.name;
+    phone=req.body.phone;
     if (req.body.password === req.body.confirmPassword) {
       var myData = new Register(req.body);
-
       console.log(myData)
 
       const token = await myData.generateAuthToken();
@@ -219,10 +231,16 @@ app.post('/register', auth,async (req, res) => {
       res.status(201).redirect("/admin1");
     }
     else {
-      res.send("Passwords Donot Match");
+      var err = "Passwords donot match";
+      res.status(200).render("register.pug", { 'err': err, 'email':email,'name':name,'phone':phone});
+      // res.send("Passwords Donot Match");
     }
   } catch (error) {
-    res.status(400).send("unable to save to database");
+      var email=req.body.email;
+      var name=req.body.name;
+      var phone=req.body.phone;
+      res.status(200).render("register.pug", { 'err': "Cannot Add Admin Try Again", 'email':email,'name':name,'phone':phone});
+    // res.status(400).send("unable to save to database");
   }
 })
 

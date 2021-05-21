@@ -90,7 +90,7 @@ html
             .col100.col-2100(data-label="Email")=collection.email
             .col100.col-3100(data-label="Phone")=collection.phone
             .col100.col-4100(data-label="Concern")=collection.concern
-            .col100.col-5100(data-label="Status")=collection.status
+            .col100.col-5100(data-label="Status")= collection.status==undefined?"Unseen":collection.status
             .col100.col-6100(data-label="Update Status")
               if collection.status=="Resolved"
                 form(action='/delete/'+collection._id)
