@@ -4,7 +4,7 @@
 - Install Node.js and npm (at least version 13 of Node.js and at least version 6 of npm)
 - Clone the project.
 - Run `npm install`.
-- Run `npm app`. Navigate to `http://localhost:3000/`.
+- Run `node src/app`. Navigate to `http://localhost:3000/`.
 
 ![nss uiet github (0)](https://user-images.githubusercontent.com/67255069/118926000-407d9080-b95d-11eb-93d7-7c20f8ffe130.jpg)
 
